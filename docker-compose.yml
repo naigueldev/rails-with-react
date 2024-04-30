@@ -8,6 +8,6 @@ services:
     volumes:
       - ./rails_app:/opt/app
     ports:
-      - '8020:8020'
+      - '3000:3000'
     env_file:
       - .env

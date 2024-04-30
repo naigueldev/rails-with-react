@@ -8,10 +8,9 @@ WORKDIR $INSTALL_PATH
 
 COPY rails_app/ .
 
-RUN rm -f /tmp/pids/server.pid
-
 RUN gem install rails bundler
 
 RUN bundle install
 
-CMD bin/rails server
+EXPOSE 3000
+CMD ["./bin/rails", "server"]
