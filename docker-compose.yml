@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+
+  rails_app:
+    build:
+      context: .
+    volumes:
+      - ./rails_app:/opt/app
+    ports:
+      - '8020:8020'
+    env_file:
+      - .env
